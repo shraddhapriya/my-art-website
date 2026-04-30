@@ -1,78 +1,140 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Art </title>
+<meta charset="UTF-8">
+<title>My Art</title>
 
-  <style>
-    body {
-      font-family: Arial;
-      margin: 0;
-      background: #f8f8f8;
-      text-align: center;
-    }
+<style>
 
-    header {
-      background: black;
-      color: white;
-      padding: 20px;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+}
 
-    .gallery img {
-      width: 250px;
-      margin: 10px;
-      border-radius: 10px;
-    }
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 90px;
+  background: rgba(0,0,0,0.8);
 
-    section {
-      padding: 20px;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    button {
-      padding: 10px 20px;
-      background: black;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-  </style>
+  padding: 0 40px;
+  z-index: 1000;
+}
+
+/* LOGO */
+.logo-container img {
+  height: 150px;
+}
+
+/* NAV LINKS */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  margin-left: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #ff4b2b;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url('bg.jpg') center/cover no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  text-align: center;
+
+  padding-top: 100px;
+}
+
+.hero h1 {
+  font-size: 50px;
+}
+
+/* BUTTON */
+.explore-btn {
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: none;
+  background: #ff4b2b;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+  animation: pulse 2s infinite;
+}
+
+.explore-btn:hover {
+  transform: scale(1.1);
+}
+
+/* ANIMATION */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255,75,43,0.7); }
+  70% { box-shadow: 0 0 0 20px rgba(255,75,43,0); }
+}
+
+/* FOOTER */
+footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+</style>
 </head>
 
 <body>
 
-<header>
-  <h1>My Art 🎨</h1>
-  <p>Custom artworks available</p>
+<header class="navbar">
+
+  <div class="logo-container">
+    <img src="logo.png" alt="Logo">
+  </div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="gallery.html">Gallery</a>
+  </nav>
+
 </header>
 
-<section>
-  <h2>Gallery</h2>
+<section class="hero">
+  <h1>My Art World 🎨</h1>
+  <p>Creative • Strong • Unstoppable</p>
 
-  <div class="gallery">
-    <img src="https://pixabay.com/images/search/white/">
-    <img src="art2.jpg">
-    <img src="art3.jpg">
-  </div>
-</section>
-
-<section>
-  <h2>Custom Orders</h2>
-  <p>DM me on Instagram for custom artworks</p>
-  <button onclick="window.location.href='https://instagram.com/fiercestrokes_'">
-    Order Now
+  <button class="explore-btn" onclick="window.location.href='gallery.html'">
+    Explore Art
   </button>
 </section>
 
-<section>
-  <h2>Details</h2>
-  <p>Instagram:fiercestrokes_</p>
-  <p>Contact : 8374018832 </p>
-</section>
+<footer>
+  <p>Follow me on Instagram: yourusername</p>
+</footer>
 
 </body>
 </html>
