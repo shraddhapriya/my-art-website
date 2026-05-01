@@ -13,7 +13,6 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
 }
 
 /* NAVBAR */
@@ -22,7 +21,9 @@ body {
   top: 0;
   width: 100%;
   height: 90px;
-  background: rgba(0,0,0,0.8);
+
+  background: rgba(230, 214, 242, 0.95); /* light lavender */
+  backdrop-filter: blur(8px);
 
   display: flex;
   align-items: center;
@@ -34,7 +35,7 @@ body {
 
 /* LOGO */
 .logo-container img {
-  height: 150px;
+  height: 100px;
 }
 
 /* NAV LINKS */
@@ -44,7 +45,7 @@ nav {
 }
 
 .navbar a {
-  color: white;
+  color: black;
   margin-left: 25px;
   text-decoration: none;
   font-weight: bold;
@@ -52,15 +53,16 @@ nav {
 }
 
 .navbar a:hover {
-  color: #ff4b2b;
+  color: #7a3ea1;
 }
 
-/* HERO */
+/* HERO SECTION */
 .hero {
-  height: 50vh;
+  height: calc(100vh - 90px);
+  margin-top: 90px;
 
   background:
-    linear-gradient(rgba(60, 20, 80, 0.5), rgba(60, 20, 80, 0.5)),
+    linear-gradient(rgba(120, 60, 150, 0.4), rgba(120, 60, 150, 0.4)),
     url('bg.jpg') center/cover no-repeat;
 
   display: flex;
@@ -70,11 +72,16 @@ nav {
 
   color: white;
   text-align: center;
-  padding-top: 100px;
 }
 
+/* TEXT */
 .hero h1 {
-  font-size: 50px;
+  font-size: 55px;
+  text-shadow: 2px 2px 15px rgba(0,0,0,0.7);
+}
+
+.hero p {
+  font-size: 20px;
 }
 
 /* BUTTON */
@@ -101,8 +108,8 @@ nav {
 
 /* FOOTER */
 footer {
-  background: black;
-  color: white;
+  background: #E6D6F2; /* light lavender */
+  color: black;
   text-align: center;
   padding: 20px;
 }
@@ -113,23 +120,22 @@ footer {
 <body>
 
 <header class="navbar">
-
   <div class="logo-container">
     <img src="logo.png" alt="Logo">
   </div>
 
   <nav>
-    <a href="#">Home</a>
-    <a href="gallery.html">Gallery</a>
+    <a href="/my-art-website/">Home</a>
+    <a href="/my-art-website/gallery.html">Gallery</a>
   </nav>
-
 </header>
 
 <section class="hero">
   <h1>Welcome To My Art World 🎨</h1>
   <p>Creative • Strong • Unstoppable</p>
 
-  <button class="explore-btn" onclick="window.location.href='gallery.html'">
+  <button class="explore-btn"
+    onclick="window.location.href='/my-art-website/gallery.html'">
     Explore Art
   </button>
 </section>
