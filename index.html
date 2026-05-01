@@ -13,6 +13,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
 }
 
 /* NAVBAR */
@@ -21,9 +22,7 @@ body {
   top: 0;
   width: 100%;
   height: 90px;
-
-  background: rgba(230, 214, 242, 0.95); /* light lavender */
-  backdrop-filter: blur(8px);
+  background: rgba(0,0,0,0.8);
 
   display: flex;
   align-items: center;
@@ -35,7 +34,7 @@ body {
 
 /* LOGO */
 .logo-container img {
-  height: 100px;
+  height: 150px;
 }
 
 /* NAV LINKS */
@@ -45,7 +44,7 @@ nav {
 }
 
 .navbar a {
-  color: black;
+  color: white;
   margin-left: 25px;
   text-decoration: none;
   font-weight: bold;
@@ -53,17 +52,13 @@ nav {
 }
 
 .navbar a:hover {
-  color: #7a3ea1;
+  color: #ff4b2b;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero {
-  height: calc(100vh - 90px);
-  margin-top: 90px;
-
-  background:
-    linear-gradient(rgba(120, 60, 150, 0.4), rgba(120, 60, 150, 0.4)),
-    url('bg.jpg') center/cover no-repeat;
+  height: 100vh;
+  background: url('bg.jpg') center/cover no-repeat;
 
   display: flex;
   flex-direction: column;
@@ -72,16 +67,12 @@ nav {
 
   color: white;
   text-align: center;
+
+  padding-top: 100px;
 }
 
-/* TEXT */
 .hero h1 {
-  font-size: 55px;
-  text-shadow: 2px 2px 15px rgba(0,0,0,0.7);
-}
-
-.hero p {
-  font-size: 20px;
+  font-size: 50px;
 }
 
 /* BUTTON */
@@ -108,8 +99,8 @@ nav {
 
 /* FOOTER */
 footer {
-  background: #E6D6F2; /* light lavender */
-  color: black;
+  background: black;
+  color: white;
   text-align: center;
   padding: 20px;
 }
@@ -120,22 +111,23 @@ footer {
 <body>
 
 <header class="navbar">
+
   <div class="logo-container">
     <img src="logo.png" alt="Logo">
   </div>
 
   <nav>
-    <a href="/my-art-website/">Home</a>
-    <a href="/my-art-website/gallery.html">Gallery</a>
+    <a href="#">Home</a>
+    <a href="gallery.html">Gallery</a>
   </nav>
+
 </header>
 
 <section class="hero">
   <h1>Welcome To My Art World 🎨</h1>
   <p>Creative • Strong • Unstoppable</p>
 
-  <button class="explore-btn"
-    onclick="window.location.href='/my-art-website/gallery.html'">
+  <button class="explore-btn" onclick="window.location.href='gallery.html'">
     Explore Art
   </button>
 </section>
@@ -145,4 +137,4 @@ footer {
 </footer>
 
 </body>
-</html>
+</html> this is my code
