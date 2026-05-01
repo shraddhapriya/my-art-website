@@ -6,14 +6,11 @@
 
 <style>
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
 }
 
 /* NAVBAR */
@@ -22,43 +19,34 @@ body {
   top: 0;
   width: 100%;
   height: 90px;
-  background: rgba(0,0,0,0.8);
+  background: #E6D6F2;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   padding: 0 40px;
-  z-index: 1000;
 }
 
-/* LOGO */
 .logo-container img {
-  height: 150px;
-}
-
-/* NAV LINKS */
-nav {
-  display: flex;
-  align-items: center;
+  height: 120px;
 }
 
 .navbar a {
-  color: white;
+  color: black;
   margin-left: 25px;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.3s;
-}
-
-.navbar a:hover {
-  color: #ff4b2b;
 }
 
 /* HERO */
 .hero {
-  height: 100vh;
-  background: url('bg.jpg') center/cover no-repeat;
+  height: calc(100vh - 90px);
+  margin-top: 90px;
+
+  background:
+    linear-gradient(rgba(120,60,150,0.4), rgba(120,60,150,0.4)),
+    url('bg.jpg') center/cover no-repeat;
 
   display: flex;
   flex-direction: column;
@@ -67,15 +55,12 @@ nav {
 
   color: white;
   text-align: center;
-
-  padding-top: 100px;
 }
 
 .hero h1 {
   font-size: 50px;
 }
 
-/* BUTTON */
 .explore-btn {
   padding: 15px 30px;
   border-radius: 30px;
@@ -83,24 +68,11 @@ nav {
   background: #ff4b2b;
   color: white;
   cursor: pointer;
-  margin-top: 20px;
-  animation: pulse 2s infinite;
 }
 
-.explore-btn:hover {
-  transform: scale(1.1);
-}
-
-/* ANIMATION */
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(255,75,43,0.7); }
-  70% { box-shadow: 0 0 0 20px rgba(255,75,43,0); }
-}
-
-/* FOOTER */
 footer {
-  background: black;
-  color: white;
+  background: #E6D6F2;
+  color: black;
   text-align: center;
   padding: 20px;
 }
@@ -113,12 +85,12 @@ footer {
 <header class="navbar">
 
   <div class="logo-container">
-    <img src="logo.png" alt="Logo">
+    <img src="logo.png">
   </div>
 
   <nav>
-    <a href="#">Home</a>
-    <a href="gallery.html">Gallery</a>
+    <a href="/my-art-website/">Home</a>
+    <a href="/my-art-website/gallery.html">Gallery</a>
   </nav>
 
 </header>
@@ -127,14 +99,15 @@ footer {
   <h1>Welcome To My Art World 🎨</h1>
   <p>Creative • Strong • Unstoppable</p>
 
-  <button class="explore-btn" onclick="window.location.href='gallery.html'">
+  <button class="explore-btn"
+    onclick="window.location.href='/my-art-website/gallery.html'">
     Explore Art
   </button>
 </section>
 
 <footer>
-  <p>Follow me on Instagram:fiercestrokes_</p>
+  <p>Follow me on Instagram: fiercestrokes_</p>
 </footer>
 
 </body>
-</html> 
+</html>
