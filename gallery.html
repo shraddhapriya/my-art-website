@@ -30,11 +30,6 @@ body {
   font-weight: bold;
 }
 
-/* TITLE */
-h1 {
-  margin-top: 20px;
-}
-
 /* GALLERY */
 .gallery {
   display: grid;
@@ -62,22 +57,39 @@ h1 {
   width: 100%;
   height: 220px;
   object-fit: cover;
-  object-position: center;
+  cursor: pointer;
 }
 
-/* ENQUIRE BUTTON (NOW LINK STYLE) */
-.enquire-btn {
+/* BUTTONS */
+.btn {
   display: inline-block;
-  padding: 10px 20px;
-  background: #ff4b2b;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 20px;
   color: white;
   text-decoration: none;
-  border-radius: 20px;
-  margin-bottom: 15px;
 }
 
-.enquire-btn:hover {
-  background: #ff416c;
+.insta { background: #ff4b2b; }
+.whatsapp { background: #25D366; }
+
+/* FULLSCREEN VIEW */
+#popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#popup img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
 }
 
 </style>
@@ -94,49 +106,80 @@ h1 {
 
 <div class="gallery">
 
+  <!-- CARD TEMPLATE -->
   <div class="card">
-    <img src="art1.jpg">
+    <img src="art1.jpg" onclick="openImage(this.src)">
     <p>Artwork 1</p>
-    <a href="https://instagram.com/fiercestrokes_" target="_blank" class="enquire-btn">Enquire / Order</a>
+
+    <a href="https://instagram.com/fiercestrokes_" target="_blank" class="btn insta">
+      Instagram
+    </a>
+
+    <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20I%20want%20Artwork%201" target="_blank" class="btn whatsapp">
+      WhatsApp
+    </a>
   </div>
 
+  <!-- COPY SAME FOR ALL -->
   <div class="card">
-    <img src="art2.jpg">
+    <img src="art2.jpg" onclick="openImage(this.src)">
     <p>Artwork 2</p>
-    <a href="https://instagram.com/fiercestrokes_" target="_blank" class="enquire-btn">Enquire / Order</a>
+    <a href="https://instagram.com/fiercestrokes_" target="_blank" class="btn insta">Instagram</a>
+    <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20I%20want%20Artwork%202" target="_blank" class="btn whatsapp">WhatsApp</a>
   </div>
 
   <div class="card">
-    <img src="art3.jpg">
+    <img src="art3.jpg" onclick="openImage(this.src)">
     <p>Artwork 3</p>
-    <a href="https://instagram.com/fiercestrokes_" target="_blank" class="enquire-btn">Enquire / Order</a>
+    <a href="https://instagram.com/fiercestrokes_" target="_blank" class="btn insta">Instagram</a>
+    <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20I%20want%20Artwork%203" target="_blank" class="btn whatsapp">WhatsApp</a>
   </div>
 
   <div class="card">
-    <img src="art4.jpg">
+    <img src="art4.jpg" onclick="openImage(this.src)">
     <p>Artwork 4</p>
-    <a href="https://instagram.com/fiercestrokes_" target="_blank" class="enquire-btn">Enquire / Order</a>
+    <a href="https://instagram.com/fiercestrokes_" target="_blank" class="btn insta">Instagram</a>
+    <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20I%20want%20Artwork%204" target="_blank" class="btn whatsapp">WhatsApp</a>
   </div>
 
   <div class="card">
-    <img src="art5.jpg">
+    <img src="art5.jpg" onclick="openImage(this.src)">
     <p>Artwork 5</p>
-    <a href="https://instagram.com/fiercestrokes_" target="_blank" class="enquire-btn">Enquire / Order</a>
+    <a href="https://instagram.com/fiercestrokes_" target="_blank" class="btn insta">Instagram</a>
+    <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20I%20want%20Artwork%205" target="_blank" class="btn whatsapp">WhatsApp</a>
   </div>
 
   <div class="card">
-    <img src="art6.jpg">
+    <img src="art6.jpg" onclick="openImage(this.src)">
     <p>Artwork 6</p>
-    <a href="https://instagram.com/fiercestrokes_" target="_blank" class="enquire-btn">Enquire / Order</a>
+    <a href="https://instagram.com/fiercestrokes_" target="_blank" class="btn insta">Instagram</a>
+    <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20I%20want%20Artwork%206" target="_blank" class="btn whatsapp">WhatsApp</a>
   </div>
 
   <div class="card">
-    <img src="art7.jpg">
+    <img src="art7.jpg" onclick="openImage(this.src)">
     <p>Artwork 7</p>
-    <a href="https://instagram.com/fiercestrokes_" target="_blank" class="enquire-btn">Enquire / Order</a>
+    <a href="https://instagram.com/fiercestrokes_" target="_blank" class="btn insta">Instagram</a>
+    <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20I%20want%20Artwork%207" target="_blank" class="btn whatsapp">WhatsApp</a>
   </div>
 
 </div>
+
+<!-- POPUP -->
+<div id="popup" onclick="closeImage()">
+  <img id="popup-img">
+</div>
+
+<script>
+function openImage(src) {
+  document.getElementById("popup").style.display = "flex";
+  document.getElementById("popup-img").src = src;
+}
+
+function closeImage() {
+  document.getElementById("popup").style.display = "none";
+}
+</script>
 
 </body>
 </html>
