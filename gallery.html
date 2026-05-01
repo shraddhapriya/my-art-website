@@ -30,6 +30,11 @@ body {
   font-weight: bold;
 }
 
+/* TITLE */
+h1 {
+  margin-top: 20px;
+}
+
 /* GALLERY */
 .gallery {
   display: grid;
@@ -52,7 +57,7 @@ body {
   transform: translateY(-10px);
 }
 
-/* IMAGE FIX */
+/* IMAGE */
 .card img {
   width: 100%;
   height: 220px;
@@ -60,15 +65,19 @@ body {
   object-position: center;
 }
 
-/* BUTTON */
+/* ENQUIRE BUTTON (NOW LINK STYLE) */
 .enquire-btn {
-  padding: 10px;
-  border: none;
+  display: inline-block;
+  padding: 10px 20px;
   background: #ff4b2b;
   color: white;
-  cursor: pointer;
-  margin-bottom: 15px;
+  text-decoration: none;
   border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+.enquire-btn:hover {
+  background: #ff416c;
 }
 
 </style>
@@ -85,13 +94,47 @@ body {
 
 <div class="gallery">
 
-  <div class="card"><img src="art1.jpg"><p>Artwork 1</p><button class="enquire-btn">Enquire</button></div>
-  <div class="card"><img src="art2.jpg"><p>Artwork 2</p><button class="enquire-btn">Enquire</button></div>
-  <div class="card"><img src="art3.jpg"><p>Artwork 3</p><button class="enquire-btn">Enquire</button></div>
-  <div class="card"><img src="art4.jpg"><p>Artwork 4</p><button class="enquire-btn">Enquire</button></div>
-  <div class="card"><img src="art5.jpg"><p>Artwork 5</p><button class="enquire-btn">Enquire</button></div>
-  <div class="card"><img src="art6.jpg"><p>Artwork 6</p><button class="enquire-btn">Enquire</button></div>
-  <div class="card"><img src="art7.jpg"><p>Artwork 7</p><button class="enquire-btn">Enquire</button></div>
+  <div class="card">
+    <img src="art1.jpg">
+    <p>Artwork 1</p>
+    <a href="https://instagram.com/fiercestrokes_" target="_blank" class="enquire-btn">Enquire / Order</a>
+  </div>
+
+  <div class="card">
+    <img src="art2.jpg">
+    <p>Artwork 2</p>
+    <a href="https://instagram.com/fiercestrokes_" target="_blank" class="enquire-btn">Enquire / Order</a>
+  </div>
+
+  <div class="card">
+    <img src="art3.jpg">
+    <p>Artwork 3</p>
+    <a href="https://instagram.com/fiercestrokes_" target="_blank" class="enquire-btn">Enquire / Order</a>
+  </div>
+
+  <div class="card">
+    <img src="art4.jpg">
+    <p>Artwork 4</p>
+    <a href="https://instagram.com/fiercestrokes_" target="_blank" class="enquire-btn">Enquire / Order</a>
+  </div>
+
+  <div class="card">
+    <img src="art5.jpg">
+    <p>Artwork 5</p>
+    <a href="https://instagram.com/fiercestrokes_" target="_blank" class="enquire-btn">Enquire / Order</a>
+  </div>
+
+  <div class="card">
+    <img src="art6.jpg">
+    <p>Artwork 6</p>
+    <a href="https://instagram.com/fiercestrokes_" target="_blank" class="enquire-btn">Enquire / Order</a>
+  </div>
+
+  <div class="card">
+    <img src="art7.jpg">
+    <p>Artwork 7</p>
+    <a href="https://instagram.com/fiercestrokes_" target="_blank" class="enquire-btn">Enquire / Order</a>
+  </div>
 
 </div>
 
